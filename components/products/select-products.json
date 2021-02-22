@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_products_select_products",
+  "info": {
+    "name": "select_products",
+    "icon": "cart-arrow-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "products": {
+      "collection": "products"
+    },
+    "amount": {
+      "type": "integer"
+    }
+  }
+}

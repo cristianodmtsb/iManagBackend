@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "name": "sales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "products": {
+      "via": "sale",
+      "collection": "products"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "sale"
+    },
+    "CartProducts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "products.select-products"
+    }
+  }
+}

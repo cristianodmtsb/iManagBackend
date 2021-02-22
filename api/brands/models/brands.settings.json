@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brands",
+  "info": {
+    "name": "Brands",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "products": {
+      "via": "brand",
+      "collection": "products"
+    },
+    "logo_brand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "photos.media"
+    }
+  }
+}

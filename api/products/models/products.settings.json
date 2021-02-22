@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "UID": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "amount": {
+      "type": "integer",
+      "required": true
+    },
+    "tax_price": {
+      "type": "decimal"
+    },
+    "tax_percent": {
+      "type": "decimal"
+    },
+    "purchase_price": {
+      "type": "decimal",
+      "required": true
+    },
+    "profit_percentage": {
+      "type": "decimal",
+      "required": true
+    },
+    "selling_price": {
+      "type": "decimal"
+    },
+    "category": {
+      "model": "category",
+      "via": "products"
+    },
+    "brand": {
+      "model": "brands",
+      "via": "products"
+    },
+    "sale": {
+      "model": "sales",
+      "via": "products"
+    },
+    "images_product": {
+      "type": "component",
+      "repeatable": true,
+      "component": "photos.media"
+    }
+  }
+}
